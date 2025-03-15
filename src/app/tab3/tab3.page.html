@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Menú
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="opciones()">
+        <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-segment value="todo">
+    <ion-segment-button value="todo" content-id="todo">
+      <ion-label>Todos</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="incompleto" content-id="incompleto">
+      <ion-label>Sin Completar</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 3</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-segment-view>
+    <ion-segment-content id="todo">
+
+      <h6 *ngIf="recuerdos.length == 0">Aún no hay recuerdos</h6>
+
+      <ion-list>
+        <ion-item *ngFor="let r of recuerdos" (click)="visualizar(r)">
+          <div class="item-content">
+            <ion-label> {{ r.titulo }} </ion-label>
+            <ion-icon *ngIf="r.completado" name="checkmark-circle-outline"></ion-icon>
+          </div>
+        </ion-item>
+      </ion-list>
+    </ion-segment-content>
+
+    <ion-segment-content id="incompleto">
+
+      <h6 *ngIf="todosRecuerdosCompletados || recuerdos.length == 0">Aún no hay recuerdos</h6>
+
+      <ion-list>
+        <ng-container *ngFor="let r of recuerdos">
+          <ion-item *ngIf="!r.completado" (click)="visualizar(r)">
+            <div class="item-content">
+              <ion-label> {{ r.titulo }} </ion-label>
+              <ion-icon *ngIf="r.completado" name="checkmark-circle-outline"></ion-icon>
+            </div>
+          </ion-item>
+        </ng-container>
+      </ion-list>
+    </ion-segment-content>
+  </ion-segment-view>
+</ion-content>

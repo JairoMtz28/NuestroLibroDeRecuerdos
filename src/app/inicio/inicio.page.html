@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">inicio</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <section>
+
+    <h1>¡Bienvenido!</h1>
+
+    Por favor, introduce tu información:
+    <ion-input [(ngModel)]="nombre" label="Tú nombre o apodo" label-placement="floating" fill="solid"
+      placeholder="Nombre"></ion-input>
+
+    <ion-input [(ngModel)]="nombrePareja" label="Nombre o apodo de tu pareja" label-placement="floating" fill="solid"
+      placeholder="Nombre de tu pareja"></ion-input>
+
+    Selecciona la fecha de su aniversario:
+    <ion-datetime [(ngModel)]="aniversario" presentation="date"></ion-datetime>
+
+    <ion-button [disabled]="!boton" (click)="iniciar()" id="mostrarToast">Iniciar</ion-button>
+    
+  </section>
+
+</ion-content>
+
+<ion-toast trigger="mostrarToast" message="¡Bienvenido!" [duration]="2000"></ion-toast>

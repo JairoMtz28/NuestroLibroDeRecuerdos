@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Álbum
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="opciones()">
+        <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="center-content">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Álbum</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <h6 *ngIf="!hayRecuerdosCompletados">Aún no hay recuerdos</h6>
+
+  <ion-grid>
+    <ion-row>
+      <ng-container *ngFor="let r of recuerdos">
+        <ion-col size="6" *ngIf="r.completado">
+          <ion-card (click)="visualizar(r)">
+            <img alt="Imagen del recuerdo" [src]="r.foto" class="card-image" />
+            <ion-card-header>
+              <ion-card-title>{{ r.titulo }}</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ng-container>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

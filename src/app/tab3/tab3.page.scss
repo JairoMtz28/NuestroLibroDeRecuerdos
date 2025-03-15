@@ -1,0 +1,23 @@
+.item-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+ion-label {
+  flex-grow: 1; /* Asegura que el título ocupe el espacio restante */
+}
+  
+h6 {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+
+  height: 50%;
+
+  color: darkgrey;
+}

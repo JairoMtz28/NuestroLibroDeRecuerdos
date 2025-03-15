@@ -1,0 +1,47 @@
+ion-content {
+    --background: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  ion-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+  }
+  
+  ion-input {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: start;
+  }
+  
+  ion-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  

@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="volver()">
+        <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      {{ tituloPagina }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">visualizar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-input *ngIf="modoEdicion" [(ngModel)]="tituloEditado" placeholder="Titulo" id="editar-titulo" (ngModelChange)="validarInput()"></ion-input>
+  <h1 *ngIf="!modoEdicion">{{ r.titulo }} <ion-icon *ngIf="r.completado" name="create-outline" id="editar-recuerdo" (click)="editarRecuerdo()"></ion-icon></h1>
+
+  <h4>
+    {{ fechaFormateada }}
+    <ion-icon *ngIf="!r.completado || modoEdicion" name="create-outline" id="editar-fecha"
+      (click)="abrirPopover($event, popover)"></ion-icon>
+  </h4>
+
+  <ion-card>
+    <img [src]="r.foto" alt="no hay foto" (click)="registrar()">
+  </ion-card>
+
+  <br>
+
+  <ion-popover #popover>
+    <ng-template>
+      <ion-content class="ion-padding">Editar fecha
+        <ion-datetime presentation="date" (ionChange)="guardarFecha($event, popover)"></ion-datetime>
+      </ion-content>
+    </ng-template>
+  </ion-popover>
+
+  <br>
+
+  <div>
+    <ion-button *ngIf="!r.completado && r.foto == ''" (click)="registrar()">Registrar este recuerdo</ion-button>
+
+    <ion-button id="mostrarToast" *ngIf="!r.completado || modoEdicion" (click)="guardado()" [disabled]="!botonHabilitado || r.foto == ''">Guardar</ion-button>
+
+    <ion-button *ngIf="!r.completado || modoEdicion" (click)="mostrarAlertaEliminar()">Eliminar</ion-button>
+
+  </div>
+
+  <div class="barraNavegacion"></div>
+
+</ion-content>
+
+<ion-toast #toast [message]="toastMessage" [duration]="2000"></ion-toast>
+
+<ion-alert id="eliminar-alert" header="¿Deseas eliminar este recuerdo?" [buttons]="botonesEliminar"></ion-alert>
+
+<ion-alert id="salir" header="¿Deseas salir?" message='Se eliminarán los cambios no guardados'
+  [buttons]="botonesSalir"></ion-alert>
