@@ -1,5 +1,35 @@
-<h1>NuestroLibroDeRecuerdos</h1>
-NuestroLibroDeRecuerdos es un proyecto de aplicación móvil desarrollado en el framework Ionic con Angular, pensado para ser utilizado por parejas que deseen guardar recuerdos importantes y con gran valor sentimental para ellos.
+# NuestroLibroDeRecuerdos
+
+**NuestroLibroDeRecuerdos** es un proyecto de aplicación móvil desarrollado en el framework **Ionic** con **Angular** con conexión a una base de datos de **Firebase**, pensado para ser utilizado por parejas que deseen guardar recuerdos importantes y con gran valor sentimental para ellos.
+
+Este proyecto **aún no está terminado** y contiene funciones que no se han implementado todavía, sigo trabajando en el proyecto para que, una vez terminado, pueda ser publicado y esté disponible para usuarios tanto de **Android** como de **iOS**.
+
+## Funcionamiento
+
+En esta sección se podrá visualizar **cada una de las vistas** que incluye la aplicación, así como una **breve explicación** de estas, resaltando su funcionamiento básico, las **herramientas del framework** que fueron implementadas y como se espera que el **usuario interactúe** con cada vista de la aplicación detalladamete.
+
+### ¡Bienvenido!
+
+Al abrir la aplicación **por primera vez** el usuario visualizará una pantalla de bienvenida, que le pedirá ingresar 3 datos para el funcionamiento de la aplicación:
+- Su nombre (o apodo)
+- Nombre (o apodo) de su pareja
+- Y la fecha de su aniversario
+
+Estos datos serán obtenidos por medio de 2 **ion-label** y un **ion-datetime**, una vez ingresados se habilitará el **ion-button** INICIAR, el cual llevará al usuario a la siguiente pantalla.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c2466102-4dd8-45c1-b1bc-dceee7f881f6" width="300"> <br>
+  Página ¡Bienvenido!
+</p>
+
+### Inicio
+
+...
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8dbae7dc-edd1-4326-8487-62d276af0ef2" width="300"> <br>
+  Página Inicio
+</p>
 
 ## Cómo probar la aplicación
 
