@@ -1,5 +1,5 @@
 <h1>NuestroLibroDeRecuerdos</h1>
-**NuestroLibroDeRecuerdos** es un proyecto de aplicación móvil desarrollado en el framework Ionic con Angular, pensado para ser utilizado por parejas que deseen guardar recuerdos importantes y con gran valor sentimental para ellos.
+NuestroLibroDeRecuerdos es un proyecto de aplicación móvil desarrollado en el framework Ionic con Angular, pensado para ser utilizado por parejas que deseen guardar recuerdos importantes y con gran valor sentimental para ellos.
 
 ## Cómo probar la aplicación
 
