@@ -24,7 +24,16 @@ Estos datos serán obtenidos por medio de 2 **ion-label** y un **ion-datetime**,
 
 ### Inicio
 
-...
+Una vez se haya ingresado a la aplicación se mostrarán 3 pantallas principales, la primera de ellas, la pantalla de **Inicio** nos muestra información del usuario, tal como su nombre y el de su pareja, la cantidad de días que llevan en su relación y por último, la cantidad de recuerdos que tienen juntos.
+
+En esta misma pantalla se pueden observar más elementos tales como un **ion-toolbar**, un **ion-navbar** y un **ion-fab**.
+
+El **ion-toolbar** mostrará el título de la pantalla en la que se encuentra actualmente, a demás tendrá en él un **ion-button**, representado con un **ion-icon**, que le permitirá al usuario navegar a otra pantalla.
+
+El **ion-navbar** mostrará las 3 principales secciones de la aplicación, representadas con un **ion-icon**, y permitirá navegar entre ellas.
+
+Por último, al presionar el elemento **ion-fab** este abrirá un **ion-alert**, cuyo propósito es el de **crear un nuevo recuerdo**, el usuario deberá ingresar un título para el nuevo recuerdo en el **ion-input** que se muestra en él; este también cuenta con 2 botones, uno para **Cancelar** la acción y otro para **Crear** el recuerdo. Del mismo modo este 
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8dbae7dc-edd1-4326-8487-62d276af0ef2" width="300"> <br>
