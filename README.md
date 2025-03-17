@@ -48,7 +48,7 @@ En esta misma pantalla se pueden observar más elementos tales como un **ion-too
 
 Para abrir esta página bastará con situarse en la **vista principal** de la aplicación y en el **navbar** seleccionar la opción llamada **Menú**, tambien se puede acceder a esta automáticamente despues de **crear un nuevo recuerdo**, acción que mostrará un **ion-toast** indicando que se ha creado un nuevo recuerdo con el mensaje **Recuerdo creado**. 
 
-La función de esta página será mostrar una lista seccionada en 2 partes con ayuda de un **ion-segment**; la primera de estas secciones, titulada **TODO**, mostrará una lista con **todos los recuerdos** que han sido creados por el usuario, independientemente de si estos contienen alguna información o no; la segunda sección llamada **SIN COMPLETAR** mostrará unicamente los **recuerdos que no hayan sido registrados**, es decir, aquellos recuerdos que solamente fueron creados pero no se les ha añadido información alguna.
+La función de esta página será mostrar una lista seccionada en 2 partes con ayuda de un **ion-segment**; la primera de estas secciones, titulada **TODO**, mostrará una lista con **todos los recuerdos** que han sido creados por el usuario, independientemente de si estos contienen alguna información o no, el único distintivo de esto será un **ion-icon** que aparecerá del lado derecho del título del recuerdo, indicando que éste ya fué **registrado**; la segunda sección llamada **SIN COMPLETAR** mostrará unicamente los **recuerdos que no hayan sido registrados**, es decir, aquellos recuerdos que solamente fueron creados pero no se les ha añadido información alguna. En cualquiera de ambas secciones, al **presionar** sobre algún recuerdo le permitirá acceder a la **pantalla de visualización** de dicho recuerdo.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9be0e318-a9c0-4f0d-a2d0-35e25ee45061" width="300"> <br>
@@ -64,13 +64,13 @@ Esta es la tercer pantalla que constituye a la **vista principal** de la aplicac
 En esta pantalla tambien se pueden observar los elementos **ion-toolbar**, un **ion-navbar** y el **ion-fab**, los cuales cumplen la misma función que en las pantallas **Inicio** y **Menú**.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/25e8fce0-a879-4371-ba89-65455160b73c" width="300"> <br>
+  <img src="https://github.com/user-attachments/assets/d8eff596-365a-4455-bdaa-e93dc52a2bbf" width="300"> <br>
   Página Álbum
 </p>
 
-Una vez se haya **registrado** al menos un recuerdo, aparecerá en esta pantalla y al presionar sobre él le permitirá acceder a la **pantalla de visualización** de dicho recuerdo.
+Una vez se haya **registrado** al menos un recuerdo, aparecerá en esta pantalla y al **presionar** sobre él le permitirá acceder a la **pantalla de visualización** de dicho recuerdo.
 
-# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## Cómo probar la aplicación
 
