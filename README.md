@@ -70,7 +70,38 @@ En esta pantalla tambien se pueden observar los elementos **ion-toolbar**, un **
 
 Una vez se haya **registrado** al menos un recuerdo, aparecerá en esta pantalla y al **presionar** sobre él le permitirá acceder a la **pantalla de visualización** de dicho recuerdo.
 
+## Pantalla de visualización
 
+El diseño de esta pantantalla incluirá elementos como un **ion-toolbar**, que mostrará el título de la pantalla así como un **ion-button** representado con un **ion-icon** que sirve para regresar a la pantalla anterior. Al centro de la pantalla veremos un **ion-card** que servirá como lienzo para mostrar las fotografías de los recuerdos, sobre este veremos el titulo y la fehca del recuerdo, debajo habrá hasta 3 **ion-button** cada uno con una función diferente.
+
+Esta pantalla es la **más compleja** en cuanto a sus funciones y la programación que hay detrás de esta, puesto que esta tiene **3  estados diferentes** dependiendo de la información que contenga el recuerdo. Todos los recuerdos contendrán en si **variables** para almacenar un **titulo**, una **fecha**, una **foto**, y una **variable booleana** que indica el estado del recuerdo (registrado o no registrado). Cada uno de los estados de la **pantalla de visualización** cumple funciones similares auque hay algunas otras que solamente se presentan en un solo estado. Estos estados son los siguientes:
+
+### Registrar
+
+Este estado de la **pantalla de visualización** se mostrará cuando el recuerdo a visualizar **no contenga información** aún. Su función es basicamente la de poder **introducir información** al recuerdo, al presionar el **ion-button** que dice **REGISTRAR ESTE RECUERDO**, la aplicación accede a la **galería del dispositivo**, permitiendo seleccionar la fotografía que hace alución a este recuerdo. 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/db337c05-6480-4433-a6b6-b94ba35dc525" width="300"> <br>
+  Página Visualización > Registrar
+</p>
+
+Una vez seleccionada la fotografía, por defecto se establecerá que la **fehca** de ese recuerdo es la actual, pero esto podrá **cambiarse** fácilmente al presionar sobre el **ion-icon** que se encuentra del lado derecho  de la misma **fecha**, esto desplegará un **ion-popover** que contendrá en él un **ion-datetime** en el que se podrá seleccionar una **nueva fecha**.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c9ffa2b6-a65e-4279-9154-5269abe4a248" width="300"> <br>
+  Página Visualización > Registrar > Editar fecha
+</p>
+
+Seleccionar la fotografía tambien hará que la opción de **REGISTRAR ESTE RECUERDO** desaparezca, pero si se quiere **cambiar la fotografía** basta con presionar sobre la fotografía actual para abrir la galería de nuevo y **elegir una nueva fotografía** (esto no afectará a la fecha ya establecida).
+
+Una vez introducida la **fecha** y la **fotografía** del recuerdo, debe presionar el **ion-button** **GUARDAR** y el recuerdo será **registrado**. Esta acción nos dirigirá a la pantalla **Álbum** y mostrará un **ion-toast** que indicará **Recuerdo registrado**.
+
+Por otro lado, si durante la operación de **Registrar** se intenta salir de esta pantalla, ya sea con la misma **interfaz** de la aplicación o inclusive con los **gestos** del teléfono, se mostrará un **ion-alert** con un mensaje de confirmación de salida así como la opción de **CANCELAR** esta acción o **SALIR** definitivamente, esto último hará que los **cambios realizados** en el recuerdo **no sean guardados**.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1786e375-75d0-43ea-b6d1-b59a5ffe0b40" width="300"> <br>
+  Página Visualización > Registrar > ¿Deseas salir?
+</p>
 
 ## Cómo probar la aplicación
 
